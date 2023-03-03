@@ -1,0 +1,824 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Utility Classes */
+.primaryBtn {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #2294ed;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 5px 0 rgb(0 0 0 / 10%);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primaryBtn:hover {
+  background-color: #0061ad;
+}
+
+.secondaryBtn {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: #183b56;
+  outline: none;
+  border: 1px solid #b9cde4;
+  background: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.secondaryBtn:hover {
+  border: 1px solid #2294ed;
+  color: #2294ed;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  position: relative;
+  height: 13rem;
+}
+.banner {
+  background-image: url("../Images/banner.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #e74694;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner a {
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 300;
+}
+
+/* Navbar */
+.navbar {
+  width: 100% !important;
+  height: 8rem;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  width: 16.8rem;
+  height: 3.1rem;
+}
+
+.navbar .logoDiv i {
+  display: none;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar .menu li {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #183b56;
+}
+
+.navbar .menu li:hover {
+  color: #2294ed;
+}
+
+.navigation-buttons button.secondaryBtn {
+  margin-right: 1rem;
+}
+
+/* Hero Section */
+#heroSection {
+  width: 100vw;
+  height: 85vh;
+}
+.sectionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 85vh;
+  align-items: center;
+  gap: 10rem;
+}
+.smRightContainer {
+  display: none;
+}
+.heroHeading {
+  font-size: 4rem;
+  color: #183b56;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.heroPara {
+  font-size: 2rem;
+  font-size: 500;
+  color: #577592;
+  margin-bottom: 3rem;
+}
+
+.sectionContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+#companiesSection {
+  width: 100vw;
+  padding: 5rem 0;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+#companiesSection p {
+  font-size: 1.6rem;
+  color: #577592;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+#companiesSection div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+#companiesSection div img {
+  width: 105px;
+  height: 46px;
+}
+
+/* Features Section */
+#features {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  background-image: url("../Images/11.svg");
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  margin-bottom: 5rem;
+}
+
+.featuresContainer {
+  width: 100%;
+  min-height: 61.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featuresContainer .featuresHeading {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #183b56;
+}
+
+.featuresContainer .cards {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;*/
+  margin-top: 3rem;
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.featuresContainer .cards .card {
+  text-align: center;
+  width: 30%;
+}
+
+.featuresContainer .cards .card img {
+  width: 50px;
+}
+
+.featuresContainer .cards .card .cardHeading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.featuresContainer .cards .card .cardPara {
+  font-size: 1.8rem;
+  color: #577592;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.featuresContainer .cards .card button i,
+.featuresContainer button i {
+  color: #2294ed;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+/* Testimonial Section */
+#testimonialSection {
+  padding: 5rem 0;
+}
+.testimonialSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.testimonialSectionContainer .leftTestimonialContainer img {
+  width: 100%;
+}
+
+.testimonialSectionContainer .rightTestimonialContainer {
+  padding: 2rem 0;
+}
+.smLeftTestimonialContainer {
+  display: none;
+}
+.testimonialSectionContainer .rightTestimonialContainer .commonHeading {
+  font-size: 1.8rem;
+  color: #183b56;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.testimonialSectionContainer .rightTestimonialContainer .commonHeading1 {
+  font-size: 3rem;
+  color: #183b56;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.testimonialSectionContainer .rightTestimonialContainer .commonPara {
+  font-size: 2rem;
+  color: #577592;
+  width: 90%;
+}
+
+.testimonialSectionContainer .rightTestimonialContainer img {
+  max-height: 30px;
+  margin: 1.5rem 0;
+}
+
+.testimonialSectionContainer .rightTestimonialContainer .testimonialText {
+  font-size: 1.8rem;
+  color: #183b56;
+  font-weight: 600;
+  width: 90%;
+}
+
+.testimonialCard {
+  margin-top: 2rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.testimonialCard img {
+  width: 56px;
+  min-height: 56px;
+}
+
+.testimonialCard .clientName {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #183b56;
+}
+.testimonialCard .post {
+  font-size: 1.4rem;
+  color: #577592;
+  font-weight: 500;
+}
+
+/* Pricing Section */
+#pricingSection {
+  width: 100vw;
+  background-color: #183b56;
+  padding: 5rem 0;
+}
+
+.pricingSectionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding: 0 8rem;
+}
+
+.rightPricingContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.leftPricingContainer {
+  width: 100%;
+  padding: 5rem 0;
+  color: white;
+}
+
+.leftPricingContainer .commonHeading {
+  font-size: 3.5rem;
+  font-weight: 5600;
+}
+
+.leftPricingContainer .commonPara {
+  color: #b9cde4;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.leftPricingContainer .ourPlansHeading {
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.princingListDiv {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+  padding: 2rem 0;
+  margin-left: 2rem;
+}
+
+.princingListDiv ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.princingListDiv ul li {
+  list-style-type: disc;
+  color: #577592;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.leftPricingContainer button {
+  margin-top: 2rem;
+}
+
+.smRightPricingContainer {
+  display: none;
+}
+
+.rightPricingContainer div {
+  background-image: url("../Images/10.png");
+  background-size: 100% 100%;
+  background-position: center;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightPricingContainer div img {
+  width: 250px;
+  height: 250px;
+}
+
+/* Get Started Section */
+#getStartedSection {
+  text-align: center;
+  padding: 8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+#getStartedSection .getStartedHeading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #183b56;
+}
+#getStartedSection .getStartedPara {
+  font-size: 2rem;
+  color: #577592;
+}
+
+/* Footer */
+#footer {
+  background-color: #ebf2fa;
+}
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 8rem 0;
+}
+
+.footerContainer .firstDiv img {
+  width: 152px;
+  height: 26px;
+}
+
+.footerContainer .firstDiv h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.footerContainer .firstDiv ul li {
+  padding: 0.8rem 0;
+  font-size: 1.6rem;
+  color: #577592;
+}
+
+.footerBottomContainer {
+  background-color: #b9cde4;
+  padding: 3rem 0;
+
+  gap: 5rem;
+}
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footerBottomContainer span {
+  font-size: 1.6rem;
+  color: #183b56;
+  text-align: center;
+}
+
+.socialIconDiv {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.socialIconDiv i { 
+  font-size: 2rem;
+  color: #183b56;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    padding: 0 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricingSectionContainer {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 1140px) {
+  .leftPricingContainer .commonHeading {
+    font-size: 2.5rem;
+  }
+  .leftPricingContainer .commonPara {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .rightPricingContainer {
+    display: flex;
+    align-items: center;
+  }
+  .rightPricingContainer div {
+    background-image: url("../Images/10.png");
+    background-size: 100% 100%;
+    background-position: center;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rightPricingContainer div img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .container {
+    padding: 0 5rem;
+  }
+  .navbar {
+    display: block;
+    background-color: #fff !important;
+    z-index: 100;
+    padding: 1rem 0;
+    height: 100%;
+  }
+
+  .leftContainer .heroHeading {
+    font-size: 3rem;
+  }
+  .leftContainer .heroPara {
+    font-size: 1.6rem;
+  }
+  .logoDiv {
+    width: 100%;
+    height: 6rem;
+  }
+
+  .logoDiv i {
+    display: block !important;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: flex-start;
+    display: none;
+    transition: all 50s linear;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+  }
+
+  .navigation-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .navbar .secondaryBtn {
+    width: 100% !important;
+  }
+  .navbar .primaryBtn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftPricingContainer {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .rightPricingContainer {
+    display: none;
+  }
+  .pricingSectionContainer {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .smRightPricingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .smRightPricingContainer div {
+    background-image: url("../Images/10.png");
+    background-size: 100% 100%;
+    background-position: center;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .smRightPricingContainer div img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .smRightContainer img {
+    width: 88vw;
+  }
+
+  .testimonialSectionContainer {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .testimonialSectionContainer .leftTestimonialContainer,
+  .rightTestimonialContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .smLeftTestimonialContainer {
+    display: block;
+  }
+  .testimonialSectionContainer .smLeftTestimonialContainer img {
+    width: 100%;
+  }
+  #testimonialSection1 .testimonialSectionContainer .leftTestimonialContainer {
+    display: none;
+  }
+  #heroSection {
+    height: 100%;
+  }
+
+  .sectionContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    height: 100%;
+  }
+
+  .sectionContainer {
+    padding: 5rem 0;
+  }
+  .leftContainer {
+    text-align: center;
+  }
+  .leftContainer .heroHeading {
+    font-size: 3rem;
+  }
+  .leftContainer .heroPara {
+    font-size: 1.6rem;
+  }
+  .smRightContainer {
+    display: block;
+  }
+  .rightContainer {
+    display: none;
+  }
+
+  #features {
+    background-image: none;
+  }
+
+  .card {
+    width: 40% !important;
+  }
+
+  .featuresContainer .featuresHeading {
+    font-size: 2.5rem;
+  }
+
+  #getStartedSection .getStartedHeading {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #183b56;
+  }
+  #getStartedSection .getStartedPara {
+    font-size: 1.8rem;
+    color: #577592;
+  }
+
+  /* Footer */
+  .footerContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 100%;
+    padding: 8rem 0;
+  }
+
+  .firstDiv {
+    margin-bottom: 5rem;
+  }
+
+  .firstDiv:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .footerContainer .firstDiv h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 3rem;
+  }
+  .leftContainer .heroHeading {
+    font-size: 2.5rem;
+  }
+  .leftContainer .heroPara {
+    font-size: 1.4rem;
+  }
+
+  .banner {
+    padding: 3rem 4rem;
+    text-align: center;
+  }
+
+  .banner a {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 300;
+  }
+  .featuresContainer .featuresHeading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .smRightPricingContainer div {
+    width: 400px;
+    height: 300px;
+  }
+
+  .smRightPricingContainer div img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100% !important;
+  }
+
+  .smRightPricingContainer div {
+    width: 300px;
+    height: 200px;
+  }
+
+  .smRightPricingContainer div img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .princingListDiv {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #getStartedSection .getStartedHeading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #183b56;
+  }
+  #getStartedSection .getStartedPara {
+    font-size: 1.6rem;
+    color: #577592;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .leftContainer .heroHeading {
+    font-size: 2.5rem;
+  }
+  .leftContainer .heroPara {
+    font-size: 1.2rem;
+  }
+
+  .smRightPricingContainer div {
+    width: 230px;
+    height: 130px;
+  }
+
+  .smRightPricingContainer div img {
+    width: 80px;
+    height: 80px;
+  }
+}
